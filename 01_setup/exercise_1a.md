@@ -28,7 +28,7 @@ for i := 0; i < 10; i++ {
 - What does `fmt.Println()` return?
 
 - Println is the equivilant of console.log.. prints what is in between it's parenthesis.
-Will space variables seperated by commas.
+Will space variables seperated by commas.  It returns the number of bytes written and any write error encountered
 
 3. Find a _blog post_ about the recent release of Go 1.18
 
@@ -36,4 +36,4 @@ Will space variables seperated by commas.
 
 Generics have been added
 Generics - functions/types that are written to work with any of a set of types provided by calling code.
-Fuzz testing is added - particularly valuble for finding security exploits or vunerabilities.Automated testing that continuously manipulated inputs that existing unit codes may miss.
+Fuzz testing is added - particularly valuble for finding security exploits or vunerabilities. Automated testing that continuously manipulated inputs that existing unit codes may miss.
