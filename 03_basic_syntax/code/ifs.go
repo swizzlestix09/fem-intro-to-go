@@ -29,7 +29,7 @@ func main() {
 		fmt.Println("Less than 100")
 	}
 
-	// ****************************
+	// **************************** //hello darkness my old
 	err := someFunction() //err represents a error. if func returns error save to var so we can figure it out
 	// => If this function returns a value,
 	// => it will be an  error of type Error
