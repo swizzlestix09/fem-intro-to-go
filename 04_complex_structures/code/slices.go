@@ -53,18 +53,24 @@ func main() {
 	fmt.Println(cap(splicedFruit))
 	fmt.Println(cap(anotherSplicedFruit))
 
+	fruitToAdd := append(fruitArray[:], "cherries", "pomegrante", "watermelon")
+	fmt.Println("After appending", fruitToAdd)
+	fmt.Println(len(fruitToAdd))
+	//appending to array doubles array size. go anticipates you may need more space, so it allocates space for any extra additions.
+	fmt.Println(cap(fruitToAdd))
 	// ***************************
 
 	// SEE SLIDE
 
 	// ***************************
 
-	// slice1 := []int{1, 2, 3}
-	// slice2 := append(slice1, 4, 5)
+	slice1 := []int{1, 2, 3}
+	//append is similar to push
+	slice2 := append(slice1, 4, 5)
 
-	// fmt.Println(slice1, slice2)
-	// fmt.Println(len(slice1), cap(slice1))
-	// fmt.Println(len(slice2), cap(slice2))
+	fmt.Println(slice1, slice2)
+	fmt.Println(len(slice1), cap(slice1))
+	fmt.Println(len(slice2), cap(slice2))
 
 	// ***************************
 
