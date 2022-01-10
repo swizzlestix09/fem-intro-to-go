@@ -1,6 +1,8 @@
 package utils
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestMakeExcited(t *testing.T) {
 	expected := "OMG SO EXCITING!"
