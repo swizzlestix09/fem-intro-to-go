@@ -66,24 +66,32 @@
 
 // ****************************************************
 
-// package main
+package main
 
-// import (
-// 	"fmt"
-// )
+import (
+	"fmt"
+)
 
-// func doThings() {
-// 	for i := 0; i < 5; i++ {
-// 		fmt.Println(i)
-// 		if i == 2 {
-// 			panic("PANIC!")
-// 		}
-// 	}
-// }
+func recoverFromPanic() {
+	if r := recover(); r != nil {
+		fmt.Println("Hey, no worries everyone's fine.")
+		fmt.Println(r)
+	}
+}
 
-// func main() {
-// 	doThings()
-// }
+func doThings() {
+	defer recoverFromPanic()
+	for i := 0; i < 5; i++ {
+		fmt.Println(i)
+		if i == 2 {
+			panic("PANIC!")
+		}
+	}
+}
+
+func main() {
+	doThings()
+}
 
 // ****************************************************
 
