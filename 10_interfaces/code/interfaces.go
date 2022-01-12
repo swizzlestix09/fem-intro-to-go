@@ -52,3 +52,13 @@ func main() {
 	fmt.Println(userDescriptionWInterface)
 	fmt.Println(groupDescriptionWInterface)
 }
+
+// EMPTY interface
+/*
+An empty interface is written like: interface{}
+Specified some kind of struct
+Specifies zero methods.
+Can hold values of any type - can be used by code that expects an unknown type
+Allows you to call methods and functions on types when you arent sure what will be expected
+Similar to the any type in typescript
+*/
