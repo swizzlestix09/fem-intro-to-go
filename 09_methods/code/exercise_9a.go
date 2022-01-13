@@ -2,21 +2,11 @@ package main
 
 import "fmt"
 
-// for struct to be available in other packages ( imports ) struct &  properties should be uppercase
-
-// User is a user type
 type User struct {
 	ID                         int
 	FirstName, LastName, Email string
 }
 
-// // User is a user type
-// type User struct {
-// ID					       int
-// FirstName, LastName, Email string
-// }
-
-//Group represents a group of users
 type Group struct {
 	Role           string
 	Users          []User
@@ -24,12 +14,12 @@ type Group struct {
 	SpaceAvailable bool
 }
 
-func describeUser(u User) string {
+func (u *User) describeUser() string {
 	desc := fmt.Sprintf("Name: %s %s E-mail: %s ", u.FirstName, u.LastName, u.Email)
 	return desc
 }
 
-func describeGroup(g Group) string {
+func (g *Group) describe() string {
 	if len(g.Users) > 2 {
 		g.SpaceAvailable = false
 	}
@@ -42,7 +32,7 @@ func describeGroup(g Group) string {
 func main() {
 	u := User{ID: 1, FirstName: "Marilyn", LastName: "Monroe", Email: "marilyn.monroe@gmail.com"}
 	u2 := User{ID: 2, FirstName: "Jane", LastName: "Eyre", Email: "jedizzle@gmail.com"}
-	u3 := User{ID: 2, FirstName: "Audrey", LastName: "Hepburn", Email: "aHep01@gmail.com"}
+	u3 := User{ID: 3, FirstName: "Audrey", LastName: "Hepburn", Email: "aHep01@gmail.com"}
 
 	g := Group{
 		Role:           "Admin",
@@ -53,7 +43,6 @@ func main() {
 
 	fmt.Println(u)
 	fmt.Println(u.FirstName) //like objects, can access individual properties with dot notation
-	fmt.Println(describeUser(u))
-	fmt.Println(describeGroup(g))
-	fmt.Println("After describeGroup call", g)
+	fmt.Println(u.describeUser())
+	fmt.Println(g.describe())
 }
