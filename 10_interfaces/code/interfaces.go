@@ -6,7 +6,7 @@ import "fmt"
 
 // Add a Describer interface
 
-type Describer interface {
+type Describer interface { //describer only has one function but I wrote two to satisfy conditions. So for an interface to work, would that mean that I have to write multiple functions with the same name for the structs that are involved with the interface?
 	describe() string
 }
 

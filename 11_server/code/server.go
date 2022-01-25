@@ -24,7 +24,7 @@ type PageVariables struct {
 }
 
 var todos []Todo
-
+/Users/swizzlestix/Coinbase/fem-intro-to-go/08_errors
 func getTodos(w http.ResponseWriter, r *http.Request) {
 	pageVariables := PageVariables{
 		PageTitle: "Get Todos",
